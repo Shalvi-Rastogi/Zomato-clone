@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <style>
+            .bottom {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: center; /* Centers content */
+    gap: 3rem; /* Adds spacing between image and text */
+    padding: 50px 100px; /* Adds spacing */
+    text-align: left; /* Aligns text */
+}
+
+.bottom .image {
+    flex: 1; /* Allows image section to take appropriate space */
+    display: flex;
+    justify-content: flex-start; /* Aligns image to the left */
+}
+
+.bottom .image .img2 {
+    width: 490px; /* Adjust width */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 2rem; /* Adds left margin */
+    border-radius: 10px; 
+    position: relative;
+    right: 50px;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.bottom .app-info {
+    flex: 1; /* Allows text section to take appropriate space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers text vertically */
+    max-width: 400px; /* Limits width */
+}
+
+.app-info h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.app-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    gap: 1rem;
+}
+
+.form input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    padding: 10px 15px;
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #e6325a;
+}
+        </style>
+    </head>
+    <body>
+
+        <div class="bottom">
+        <div class="image">
+            <img class="img2" src="\ZOMATO\IMAGES\ce5bc038a8a2d4f8f24465c8826182af1726501431.avif" alt="img">
+        </div>
+        <div class="app-info">
+            <h1>Get the Zomato App</h1>
+            <p>We will send you a link, open it on your phone to download the app</p>
+          
+        <div class="options">
+        <label><input type="radio" name="contact" checked> Email</label>
+        <label><input type="radio" name="contact"> Phone</label>
+         </div>
+
+        <div class="form">
+            <input type="email" placeholder="Email">
+            <button>Share App Link</button></a>
+          
+        </div>
+        </div>
+        </div>
+    </body>
+</html>

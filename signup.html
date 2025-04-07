@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+                font-family: 'Poppins', sans-serif;
+                overflow: scroll;
+            }
+            .form-container{
+                top: 0px;
+                 left: 0px;
+                width: 100%;
+                background-color: gainsboro;
+                height: 100%;
+                opacity: 0.85;
+                visibility: visible;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                transition: opacity 0.25s;
+
+            }
+            .form-container .signin{
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column; 
+            width: 350px;
+            height: 450px;
+            }
+
+            .form-container .signin .username{
+                width: 250px;
+                height: 40px;
+                font-size: large;
+                margin: 20px;
+                border-radius: 8px;
+            }
+            .form-container .signin .email{
+                width: 250px;
+                height: 40px;
+                font-size: large;
+                margin: 20px;
+                border-radius: 8px;
+            }
+            .form-container .signin .signinbtn{
+                width: 150px;
+                height: 30px;
+                font-size: 16px;      
+                font-weight: bold;
+                border: none;        
+                margin: 20px;
+                border-radius: 8px;
+                padding: 10px 20px;
+                cursor: pointer; 
+                box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); 
+            }
+            .form-container .signin .tos{
+            display: block;
+            font-size: medium;
+            } 
+            .form-container .signin .tos .tos1 , .tos2 , .tos3{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <div class="signin" id="signupform">
+                <h2 > Sign-up</h2>
+                <form method="POST" action="db2.php">
+                <input type="text" class="username" id="name" name="name" placeholder="FullName">
+                <input type="email" class="email" id="email" name="email" placeholder="Email" >
+                <span class="tos">
+                <input type="checkbox" class="symbol">          
+                I agree to Zomato's ,
+                <a href="https://www.zomato.com/policies/terms-of-service/" class="tos1">Terms of Services</a>
+                ,
+                <a href="https://www.zomato.com/policies/privacy/" class="tos2">Privacy Policy </a>
+                , and 
+                <a href="https://www.zomato.com/policies/" class="tos3">Content Policies</a>
+                .
+                </span>
+                <button class="signinbtn" onclick="signinuser()">Sign-in</button>
+            </form>
+                <script>
+                    function signinuser(){
+                        let fullname=document.getElementById("name").value;
+                        let email=document.getElementById("email").value;
+                        let checkbox = document.getElementById("checkbox");
+                        if(fullname.trim() !== "" && email.includes("@") && email.includes(".") && checkbox.checked)
+                        {
+                            alert("signin succesfull");
+                        }
+                        else{
+                             alert("try again!");
+
+                            if(!checkbox.checked)
+                            {
+                                alert("Accept Terms and Privacy Policy");
+                            }
+                        }
+                    }
+                </script>
+              
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+ body {
+        font-family: 'Poppins', sans-serif;
+    }
+    main{
+        flex: 1;
+    }
+
+.app{
+    text-align: left;
+    padding-right: 5px;
+    list-style: none;
+    font-size: large;
+    padding-bottom: 2%;
+    position: absolute;
+    z-index: 1000;
+}
+nav{
+    color: #000;
+    font-size: medium;
+    position: absolute;
+    z-index: 1000;
+    text-align: right;
+    left: 50%;
+    width: 60%;
+    transform: translateX(-20%); /*for centering*/
+}
+nav ul{
+    list-style:none ; /*removing bullets*/
+    text-align:right;
+}
+nav ul li{
+    display: inline-block;
+    padding-right:8%;
+    padding-top: 5px;
+
+}
+.reln-button{
+    color:white;
+    font-size: larger;
+ 
+}
+.add-button{
+    color:white;
+    font-size: larger;
+}
+.login-button{
+    color: white;
+    font-size: larger;
+   
+}
+.up-button{
+    color: white;
+    font-size: larger;
+
+}
+.app-btn{
+    color: white;
+    font-size: medium;
+   
+}
+.top{
+    position: relative;
+    height: 120%;
+    width: 100%;
+    overflow: visible;
+    text-align: center;
+}
+.top .img1{
+    height: 60%;
+    width: 100%;
+    filter: brightness(80%);
+    
+}
+.top .img2{
+    position: absolute;
+    top: 200px;
+    left: 40%; /* Adjust for better positioning */
+    width: 300px;
+    height: auto;
+ 
+}
+.top .heading{
+    position: absolute;
+    top: 50px;  /* Moves image down */
+    padding-left: 98%;
+    padding-top: 35%;
+    padding-bottom: 15px;
+    color: white;
+   text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: translate(-50%, -50%); 
+    white-space: nowrap;
+}
+.top .heading .city{
+    font-weight: bolder;
+}
+.top .search{
+       position: absolute;
+        top: 43%;
+        right: 25%; 
+        width: auto;
+        height: 6%;
+        align-items: center;
+        display: flex; /*to show in one line*/
+        flex-direction: row;
+        background: white;
+        padding: 5px; 
+        border-radius: 0.8rem;
+}
+.search .location{
+    width: 200px;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-right: 10px;
+    flex-grow: 1;
+}
+ .search .location .sp{
+    color: gray;
+    padding: 4px;
+}
+
+.search .line{
+           height: 1.2rem ;
+           border: 0.05rem solid gray;
+}
+.search .location .sp3 {
+    color:rgb(255,126,139);
+    height: 1.4rem;
+    border-radius: 0.8rem;
+    padding: 4px;
+}
+.resto{
+    position: relative;
+    bottom: 4px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-right: 10px;
+    width: 30rem;
+    height: 29px;
+}
+.resto .sp2{
+    padding:4px ;
+    color: rgb(121, 112, 112);
+}
+.resto .res{
+      width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+}
+.location .loc{
+    border: none;
+    font-size:auto;
+}
+
+#restaurantlist{
+    position: absolute;
+    top: 100%;  /* Puts dropdown right below the search box */
+    left: 0;
+    width: 100%;  /* Ensures dropdown is as wide as the input box */
+    background: white;
+    border: none;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+#restaurantlist li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#restaurantlist li:hover {
+    background-color: #f0f0f0;
+}
